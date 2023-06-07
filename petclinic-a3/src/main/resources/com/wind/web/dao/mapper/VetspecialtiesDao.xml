@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.wind.web.dao.VetspecialtiesDao">
+
+  <delete id="vetspec_deleteDao">
+    DELETE FROM VET_SPECIALTIES WHERE vet_id IN #{param1}
+  </delete>
+  
+  <insert id="vetspec_addDao">
+    INSERT INTO VET_SPECIALTIES (vet_id, specialty_id) 
+      VALUES (#{param1}, #{param2})
+  </insert>
+  
+</mapper>
